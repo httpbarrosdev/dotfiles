@@ -1,0 +1,65 @@
+#-------------------------------------------------------------
+# Directories
+#-------------------------------------------------------------
+
+alias ..='cd ..'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias mkdir='mkdir -p'
+
+#-------------------------------------------------------------
+# Pretty-print 
+#-------------------------------------------------------------
+
+alias h='history'
+alias j='jobs -l'
+alias which='type -a'
+
+alias path='echo -e ${PATH//:/\\n}'
+alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
+alias du='du -kh' 
+alias df='df -kTh'
+
+#-------------------------------------------------------------
+# Listing Files
+#-------------------------------------------------------------
+
+alias ls='ls -h --color'
+alias lx='ls -lXB'         #  Sort by extension.
+alias lk='ls -lSr'         #  Sort by size, biggest last.
+alias lt='ls -ltr'         #  Sort by date, most recent last.
+alias lc='ls -ltcr'        #  Sort by/show change time,most recent last.
+alias lu='ls -ltur'        #  Sort by/show access time,most recent last.
+alias ll="ls -lv --group-directories-first"
+alias lm='ll |more'        #  Pipe through 'more'
+alias lr='ll -R'           #  Recursive ls.
+alias la='ll -A'           #  Show hidden files.
+alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
+
+#-------------------------------------------------------------
+# Browsers 
+#-------------------------------------------------------------
+
+alias thunderbird='(thunderbird -ProfileManager >/dev/null 2>&1 &)'
+alias ff='(firefox >/dev/null 2>&1 &)'
+
+#-------------------------------------------------------------
+# User
+#-------------------------------------------------------------
+
+alias logout='pkill -u $(whoami)'
+
+#-------------------------------------------------------------
+# Jekyll Development
+#-------------------------------------------------------------
+
+alias jkls='bundle exec jekyll server'
+alias jklb='bundle exec jekyll build'
+
+#-------------------------------------------------------------
+# Youtube Downloads
+#-------------------------------------------------------------
+
+alias ytbpl="youtube-dl -i -f mp4 --yes-playlist"
+alias ytbmp3="youtube-dl --extract-audio --audio-format mp3"

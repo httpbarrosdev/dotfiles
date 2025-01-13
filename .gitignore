@@ -1,0 +1,10 @@
+# Temporary files
+*.swp
+*.swo
+*~
+
+vim/plugged/
+vim/*.*
+vim/vim
+vim/spell
+

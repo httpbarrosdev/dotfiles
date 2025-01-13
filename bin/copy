@@ -1,0 +1,13 @@
+#! /bin/bash
+
+SRC="$( dirname $( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd ) )"
+DEST=$HOME
+
+ln -vs $SRC/vim $DEST/.vim
+ln -vs $SRC/zshrc $DEST/.zshrc
+ln -vs $SRC/bashrc $DEST/.bashrc
+ln -vs $SRC/profile $DEST/.profile
+ln -vs $SRC/zprofile $DEST/.zprofile
+ln -vs $SRC/aliases $DEST/.aliases
+ln -vs $SRC/gitconfig $DEST/.gitconfig
+ln -vs $SRC/Xresources $DEST/.Xresources

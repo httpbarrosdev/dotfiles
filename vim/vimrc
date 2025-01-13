@@ -1,0 +1,87 @@
+" Specify a directory for plugins
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'airblade/vim-gitgutter'
+Plug 'joshdick/onedark.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'djoshea/vim-autoread'
+
+" Initialize plugin system
+call plug#end()
+
+set nocompatible
+set encoding=utf-8
+
+filetype off
+filetype plugin indent on
+
+" Rendering
+syntax enable
+set ttyfast
+set t_Co=256
+set number
+set numberwidth=2
+set modelines=0
+set ruler
+set visualbell
+
+syntax enable
+set background=dark
+colorscheme onedark
+
+" Whitespace
+set wrap
+set textwidth=79
+set formatoptions=tcqrn1
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set noshiftround
+
+" Cursor Motion
+set scrolloff=3
+set backspace=indent,eol,start
+set matchpairs+=<:>
+" runtime! macros/matchit.vim
+
+" Allow hidden buffers
+set hidden
+
+" Status 
+set laststatus=2
+set showmode
+set showcmd
+
+" Searching
+nnoremap / /\v
+vnoremap / /\v
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set showmatch
+map <leader><space> :let @/=''<cr> " clear search
+
+" List options
+set wildmenu
+
+" Confirm action
+set confirm
+
+" Window title
+set title
+
+" Movement
+nnoremap j gj
+nnoremap k gk
+
+" NERDTree close
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" NERDTree Keybinding
+map <C-n> :NERDTreeToggle<CR>
