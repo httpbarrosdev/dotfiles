@@ -1,4 +1,3 @@
-[[ -d $HOME/.local/bin ]] && export PATH="$HOME/.local/bin:$PATH"
 [[ -d $HOME/.local/racket/bin ]] && export PATH="$HOME/.local/racket/bin:$PATH"
 [[ -d $HOME/.local/go ]] && export PATH="$HOME/.local/go/bin:$PATH"
 [[ -d $HOME/.cargo/bin ]] && export PATH="$HOME/.cargo/bin:$PATH"
@@ -10,3 +9,4 @@
 [[ -d $HOME/.composer ]] && export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+[[ -d $HOME/.yarn/bin ]] && export PATH="$HOME/.yarn/bin:$PATH"
